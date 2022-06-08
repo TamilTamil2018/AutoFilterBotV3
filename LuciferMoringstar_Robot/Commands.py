@@ -82,10 +82,7 @@ async def start(bot, message):
                         f_caption=f_caption
                 if f_caption is None:
                     f_caption = f"{files.file_name}"
-                buttons = [
-                    [
-                        InlineKeyboardButton('🎖 DEPLOY YOURS 🎖', url=f'{TUTORIAL}')
-                    ]
+                buttons = [  
                     ]
                 await bot.send_cached_media(
                     chat_id=message.from_user.id,
@@ -102,9 +99,6 @@ async def start(bot, message):
             text="**Please Join My Updates Channel to use this Bot!**",
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [
-                        InlineKeyboardButton("📢 Join Updates Channel 📢", url=invite_link.invite_link)
-                    ]
                 ]
             )
         )
